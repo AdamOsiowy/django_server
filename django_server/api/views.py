@@ -4,7 +4,7 @@ from rest_framework.decorators import api_view
 from .models import User, Repository
 from .serializer import UserSerializer, RepositorySerializer
 import json
-from ..shared_functions import *
+from shared_functions import *
 
 GITHUB_API_URL = 'https://api.github.com'
 

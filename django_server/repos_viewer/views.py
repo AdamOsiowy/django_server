@@ -1,4 +1,4 @@
-from ..shared_functions import *
+from shared_functions import *
 from django.shortcuts import render
 from django.http import *
 
