@@ -1,0 +1,18 @@
+{% extends "repos_viewer/base.html" %}
+{% block title %} User {% endblock %}
+
+{% block content %}
+
+    <h1>User name: {{ user_name }}, sum of stars: {{ sum_of_stars }}</h1>
+    <h2>Repositories: </h2>
+    <ol>
+        {% for repo in json_list %}
+        <li>{{ repo.name }}</li>
+            <ul>
+                <li>stars: {{ repo.stargazers_count }}</li>
+                <li>url: <a href={{ repo.html_url }} target="_blank">link</a> </li>
+            </ul>
+        {% endfor %}
+    </ol>
+
+{% endblock %}
