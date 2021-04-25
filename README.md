@@ -58,5 +58,5 @@ You can do that for all Github users even if they have more than 1k repositories
 - use created models to store data in database
 - setup docker and CI/CD
 - add POST method support to create repositories via GitHub api
-- improve user and repository pages to contain more informations
+- improve user and repository pages to contain more information
 - add tests to check the operation correctness of the server
