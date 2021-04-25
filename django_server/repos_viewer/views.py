@@ -1,3 +1,8 @@
+from ..shared_functions import *
 from django.shortcuts import render
 
-# Create your views here.
+GITHUB_API_URL = 'https://api.github.com'
+
+
+def home_view(request):
+    return render(request, "repos_viewer/home.html")
