@@ -33,9 +33,10 @@ Data is returned via http protocol.
 
 ## Examples
 
-The scheme is: \
+Urls pattern: \
 `http://127.0.0.1:8000/{username}` \
 `http://127.0.0.1:8000/{username}/{repo_name}` \
+Endpoints: \
 `http://127.0.0.1:8000/api/{username}` \
 `http://127.0.0.1:8000/api/{username}/{repo_name}` 
 
@@ -51,3 +52,11 @@ The scheme is: \
     `curl -i -H "Accept: application/json" http://127.0.0.1:8000/api/AdamOsiowy/Screenshotter`
 
 You can do that for all Github users even if they have more than 1k repositories.
+
+## Next steps:
+- improve the homepage to include a description of the project
+- use created models to store data in database
+- setup docker and CI/CD
+- add POST method support to create repositories via GitHub api
+- improve user and repository pages to contain more informations
+- add tests to check the operation correctness of the server
