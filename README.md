@@ -19,6 +19,7 @@ Install dependencies:
 
 Run server:
 
+    cd django_server
     python manage.py runserver
 
 Then open browser at home page: `http://127.0.0.1:8000/`
