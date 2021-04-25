@@ -50,3 +50,13 @@ def repo_view(req, name, repo_name):
     stars = getRepoStars(name, repo_name, request)
     return render(req, "repos_viewer/repo.html",
                   {"user_name": name, "repo_name": repo_name, "stars": stars})
+
+
+def error404(req, exception):
+    return HttpResponse(content=render(req, "repos_viewer/error404.html"), content_type='text/html; charset=utf-8',
+                        status=404)
+
+
+def error500(req):
+    return HttpResponse(content=render(req, "repos_viewer/error500.html"), content_type='text/html; charset=utf-8',
+                        status=500)
