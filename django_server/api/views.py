@@ -36,3 +36,22 @@ def get_user_view(req, name):
                             content_type="application/json", status=200)
     else:
         return HttpResponseNotAllowed("GET")
+
+
+@api_view(['GET', ])
+def get_repo_view(req, name, repo_name):
+    request = requests.get(GITHUB_API_URL + '/repos/' + name + '/' + repo_name)
+
+    if request.status_code == 404:
+        return HttpResponse(json.dumps({"error_code": 404}), content_type="application/json", status=404)
+    if request.status_code == 500:
+        return HttpResponse(json.dumps({"error_code": 500}), content_type="application/json", status=500)
+    if request.status_code == 403:
+        return HttpResponse(json.dumps({"error_code": 403}), content_type="application/json", status=403)
+
+    stars = getRepoStars(name, repo_name, request)
+    if req.method == "GET":
+        return HttpResponse(json.dumps({"repo_name": repo_name, "stars": stars}), content_type="application/json",
+                            status=200)
+    else:
+        return HttpResponseNotAllowed("GET")
