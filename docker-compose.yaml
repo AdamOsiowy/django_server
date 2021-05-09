@@ -1,0 +1,12 @@
+version: "3.9"
+services: 
+    server:
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        image: repo_viewer_image:latest
+        container_name: repo_viewer
+        ports:
+            - "80:8000"
+        volumes: 
+            - ./:/code
