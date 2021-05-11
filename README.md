@@ -35,20 +35,19 @@ Endpoints: \
 - to list user named AdamOsiowy \
     open http://127.0.0.1:8000/AdamOsiowy \
     or run in terminal: \
-    `curl -i -H "Accept: application/json" http://127.0.0.1:8000/api/AdamOsiowy`
+    `curl -i -H "Accept: application/json" http://127.0.0.1:80/api/AdamOsiowy`
 
 
 - to get information about AdamOsiowy repository named Screenshotter:
     open http://127.0.0.1:8000/AdamOsiowy/Screenshotter \
     or run in terminal: \
-    `curl -i -H "Accept: application/json" http://127.0.0.1:8000/api/AdamOsiowy/Screenshotter`
+    `curl -i -H "Accept: application/json" http://127.0.0.1:80/api/AdamOsiowy/Screenshotter`
 
 You can do that for all Github users even if they have more than 1k repositories.
 
 ## Next steps:
 - improve the homepage to include a description of the project
 - use created models to store data in database
-- setup docker and CI/CD
 - add POST method support to create repositories via GitHub api
 - improve user and repository pages to contain more information
 - add tests to check the operation correctness of the server
