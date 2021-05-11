@@ -2,27 +2,19 @@
 
 ## Setup
 
+You will need docker-engine and docker-compose installed:
+- docker-engine [installation page](https://docs.docker.com/engine/install/)
+- docker-compose [installation page](https://docs.docker.com/compose/install/)
+
 Clone repository:
 
-    git clone https://github.com/AdamOsiowy/django_server.git
-    cd django_server
+    git clone https://github.com/AdamOsiowy/django_server.git .
 
-Create virtual environment and activate it:
+Run application:
 
-    pip install virtualenv
-    virtualenv venv
-    source venv/bin/activate
+    docker-compose up
 
-Install dependencies:
-
-    pip install -r requirements.txt
-
-Run server:
-
-    cd django_server
-    python manage.py runserver
-
-Then open browser at home page: `http://127.0.0.1:8000/`
+Then open browser at home page: `http://127.0.0.1:80/`
 
 ## Description
 It's a web server wrote in Django with its own RESTapi that enables you to:
@@ -34,11 +26,11 @@ Data is returned via http protocol.
 ## Examples
 
 Urls pattern: \
-`http://127.0.0.1:8000/{username}` \
-`http://127.0.0.1:8000/{username}/{repo_name}` \
+`http://127.0.0.1:80/{username}` \
+`http://127.0.0.1:80/{username}/{repo_name}` \
 Endpoints: \
-`http://127.0.0.1:8000/api/{username}` \
-`http://127.0.0.1:8000/api/{username}/{repo_name}` 
+`http://127.0.0.1:80/api/{username}` \
+`http://127.0.0.1:80/api/{username}/{repo_name}` 
 
 - to list user named AdamOsiowy \
     open http://127.0.0.1:8000/AdamOsiowy \
