@@ -3,8 +3,8 @@
 ## Setup
 
 You will need docker-engine and docker-compose installed:
-- docker-engine [installation page](https://docs.docker.com/engine/install/)
-- docker-compose [installation page](https://docs.docker.com/compose/install/)
+- docker-engine [installation page](https://docs.docker.com/engine/install/){:target="_blank"}
+- docker-compose [installation page](https://docs.docker.com/compose/install/){:target="_blank"}
 
 Clone repository:
 
