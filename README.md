@@ -33,13 +33,13 @@ Endpoints: \
 `http://127.0.0.1:80/api/{username}/{repo_name}` 
 
 - to list user named AdamOsiowy \
-    open http://127.0.0.1:8000/AdamOsiowy \
+    open http://127.0.0.1:80/AdamOsiowy \
     or run in terminal: \
     `curl -i -H "Accept: application/json" http://127.0.0.1:80/api/AdamOsiowy`
 
 
 - to get information about AdamOsiowy repository named Screenshotter:
-    open http://127.0.0.1:8000/AdamOsiowy/Screenshotter \
+    open http://127.0.0.1:80/AdamOsiowy/Screenshotter \
     or run in terminal: \
     `curl -i -H "Accept: application/json" http://127.0.0.1:80/api/AdamOsiowy/Screenshotter`
 
